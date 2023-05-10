@@ -91,6 +91,7 @@ const CryptoPricefinal = () => {
     onChange={handleSymbol1Change}
   />
 
+
         <label htmlFor="amount" className="crypto-label">Amount</label>
         <input type="text" id="amount" className="crypto-input" value={amount} onChange={handleAmountChange} />
       </div>
@@ -100,7 +101,9 @@ const CryptoPricefinal = () => {
 
 
       <div className="crypto-box">
-      <select value={symbol1} onChange={handleSymbol2Change}>
+    
+
+        <select value={symbol2} onChange={handleSymbol2Change}>
     <option value="">Select a token</option>
     <option value="BTC">BTC بیت کوین</option>
     <option value="ETH">ETH اتریوم</option>
@@ -109,10 +112,9 @@ const CryptoPricefinal = () => {
   <input
     type="text"
     placeholder="Enter a symbol"
-    value={symbol1}
+    value={symbol2}
     onChange={handleSymbol2Change}
   />
-
 
 
         <div className="crypto-result">{formatPrice(result)}</div>
